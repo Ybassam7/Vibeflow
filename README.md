@@ -167,6 +167,10 @@ VITE_BASE_URL = "https://linked-posts.routemisr.com"
 | :--------------------------------------------: | :------------------------------------------------: |
 | ![Post Preview](./screenshots/postPreview.png) | ![Network Status](./screenshots/networkStatus.png) |
 
+|                Edit Post                 |               Delete Confirmation                |
+| :--------------------------------------: | :----------------------------------------------: |
+| ![Edit Post](./screenshots/editPost.png) | ![Delete Confirmation](./screenshots/RUSure.png) |
+
 ---
 
 ## 👨‍💻 Author
