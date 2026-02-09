@@ -14,8 +14,6 @@ import logo from "../../assets/images/VibeFlowDark.png";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
-// Optional: Import your custom button if you want consistency,
-// or just use Tailwind classes as shown below for speed.
 
 export default function VibeNav() {
   const { token, setToken, userData } = useContext(AuthContext);
