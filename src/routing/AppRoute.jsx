@@ -10,7 +10,7 @@ import ProtectedAuthRoutes from "./ProtectedAuthRoutes";
 const Login = lazy(() => import("../pages/auth/Login"));
 const Register = lazy(() => import("../pages/auth/Register"));
 const Profile = lazy(() => import("../pages/auth/Profile"));
-const Notfound = lazy(() => import("../pages/NotFound/Notfound"));
+const Notfound = lazy(() => import("../pages/notFound/Notfound"));
 const Posts = lazy(() => import("../pages/posts/Posts"));
 const PostDetails = lazy(() => import("../pages/posts/PostDetails"));
 
