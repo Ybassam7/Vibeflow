@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { HiHome, HiOutlineExclamationCircle } from "react-icons/hi";
-import Seo from "../../Components/seo/Seo";
+import Seo from "../../components/seo/Seo";
 
 export default function Notfound() {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import PostsList from "../../features/posts/components/PostsList";
-import Seo from "../../Components/seo/Seo";
+import Seo from "../../components/seo/Seo";
 import CreatePostForm from "../../features/posts/components/CreatePostForm";
 import ProfileCard from "../../features/profile/components/ProfileCard";
 
