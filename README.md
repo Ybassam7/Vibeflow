@@ -11,7 +11,7 @@ The project focuses on **scalable architecture, performance optimization, and re
 
 ## 🚀 Live Demo
 
-👉 [https://vibeflow-beryl.vercel.app/](https://vibeflow-beryl.vercel.app/)
+👉 [https://vibeflow-blush.vercel.app/](https://vibeflow-blush.vercel.app/)
 
 ---
 
