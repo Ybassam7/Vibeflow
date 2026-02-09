@@ -4,7 +4,7 @@ import { router } from "./routing/AppRoute";
 import AuthContext from "./context/AuthContext";
 import { ToastContainer } from "react-toastify";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import NetworkStatus from "./components/NetworkStatus/NetworkStatus";
+import NetworkStatus from "./components/networkStatus/NetworkStatus";
 
 const queryClient = new QueryClient();
 
