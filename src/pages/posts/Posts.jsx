@@ -1,7 +1,7 @@
 import React from "react";
 import Add from "../../features/posts/components/CreatePostForm";
 import PostsList from "../../features/posts/components/PostsList";
-import Seo from "../../Components/Seo/Seo";
+import Seo from "../../Components/seo/Seo";
 
 function Posts() {
   return (
