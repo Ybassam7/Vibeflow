@@ -1,6 +1,5 @@
 import { RouterProvider } from "react-router-dom";
 import "./App.css";
-import Layout from "./Components/Layout/Layout";
 import { router } from "./routing/AppRoute";
 import AuthContext from "./context/AuthContext";
 import { ToastContainer } from "react-toastify";
