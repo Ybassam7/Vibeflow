@@ -1,8 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import PostItem from "../../features/posts/PostItem";
 import PostSkeleton from "../../features/posts/components/PostSkeleton";
 import useVibeFetch from "../../hooks/useVibeFetch";
+import PostItem from "./../../features/posts/components/PostItem";
 
 export default function PostDetails() {
   const { details } = useParams();
