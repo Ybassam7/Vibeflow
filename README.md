@@ -155,6 +155,18 @@ VITE_BASE_URL = "https://linked-posts.routemisr.com"
 | :----------------------------------------: | :------------------------------------------: |
 | ![User Profile](./screenshots/profile.png) | ![404 Not Found](./screenshots/notfound.png) |
 
+|                Edit & Delete                 |               Action Confirmation               |
+| :------------------------------------------: | :---------------------------------------------: |
+| ![Edit Delete](./screenshots/editDelete.png) | ![Confirmation](./screenshots/confirmation.png) |
+
+|                  Post Loading                  |                  Post Skeleton                   |
+| :--------------------------------------------: | :----------------------------------------------: |
+| ![Post Loading](./screenshots/postLoading.png) | ![Post Skeleton](./screenshots/postSkeleton.png) |
+
+|                  Post Preview                  |                   Network Status                   |
+| :--------------------------------------------: | :------------------------------------------------: |
+| ![Post Preview](./screenshots/postPreview.png) | ![Network Status](./screenshots/networkStatus.png) |
+
 ---
 
 ## 👨‍💻 Author
