@@ -143,9 +143,9 @@ VITE_BASE_URL = "https://linked-posts.routemisr.com"
 
 ## 📸 Screenshots
 
-|               Login Page               |               Registration Page                |
-| :------------------------------------: | :--------------------------------------------: |
-| ![Login Page](./screenshots/login.png) | ![Registration Page](./screenshots/signup.png) |
+|                Login Page                 |                 Registration Page                 |
+| :---------------------------------------: | :-----------------------------------------------: |
+| ![Login Page](./screenshots/newLogin.png) | ![Registration Page](./screenshots/newSignup.png) |
 
 |                Global Feed                 |                  Post Details                  |
 | :----------------------------------------: | :--------------------------------------------: |
