@@ -107,7 +107,6 @@ src/
 ├── utils/           # Helper functions & Formatters
 └── routing/         # Router Configuration & Guards
 
-This structure improves maintainability, scalability, and separation of concerns in larger applications.
 ```
 
 ---
