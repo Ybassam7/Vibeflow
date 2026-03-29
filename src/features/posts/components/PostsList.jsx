@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { useInfiniteQuery } from "@tanstack/react-query";
-import apiClient from "../../services/apiClient";
+import apiClient from "../services/apiClient";
 import PostItem from "./PostItem";
 import PostSkeleton from "./PostSkeleton";
 import { AuthContext } from "../../../context/AuthContext";

@@ -3,7 +3,7 @@ import { IoSend } from "react-icons/io5";
 import { useForm } from "react-hook-form";
 import { FaSpinner } from "react-icons/fa";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import apiClient from "../../services/apiClient";
+import apiClient from "../services/apiClient";
 import { toast, Slide } from "react-toastify";
 import Button from "../../../components/ui/Button";
 
