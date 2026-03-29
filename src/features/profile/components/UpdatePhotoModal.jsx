@@ -3,7 +3,7 @@ import { Modal, ModalBody, Label, FileInput } from "flowbite-react";
 import { FaCloudUploadAlt, FaTimes } from "react-icons/fa"; // Added FaTimes for clearing
 import { useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
-import apiClient from "../../services/apiClient";
+import apiClient from "../../../services/apiClient";
 import Button from "../../../components/ui/Button";
 import { toast, Slide } from "react-toastify";
 import { AuthContext } from "../../../context/AuthContext";
