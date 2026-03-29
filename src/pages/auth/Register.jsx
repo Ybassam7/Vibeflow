@@ -116,7 +116,15 @@ export default function Register() {
       }
     } catch (error) {
       console.log(error);
-      setApiError(error.response?.data?.error || "Something went wrong");
+      const message =
+  error.response?.data?.error ||
+  error.response?.data?.message ||
+  error.message ||
+  "Something went wrong";
+
+setApiError(
+  typeof message === "string" ? message : JSON.stringify(message)
+);
     }
   }
 
