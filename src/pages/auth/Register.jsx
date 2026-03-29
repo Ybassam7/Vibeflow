@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from "axios";
+import apiClient from "../../services/apiClient";
 import { Link, useNavigate } from "react-router-dom";
 import { Controller, useForm } from "react-hook-form";
 import * as z from "zod";
@@ -107,10 +107,7 @@ export default function Register() {
         const year = date.getFullYear();
         payload.dateOfBirth = `${month}-${day}-${year}`;
       }
-      const { data: response } = await axios.post(
-        `${import.meta.env.VITE_BASE_URL}/users/signup`,
-        payload,
-      );
+      const { data: response } = await apiClient.post("/users/signup")
       if (response.message === "success") {
         setApiError(null);
         navigate("/login");

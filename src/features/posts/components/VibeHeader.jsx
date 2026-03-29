@@ -3,7 +3,7 @@ import { Avatar, Dropdown, DropdownItem } from "flowbite-react";
 import { formatDate } from "../../../utils/formatDate";
 import { HiDotsHorizontal, HiPencil, HiTrash } from "react-icons/hi";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import axios from "axios";
+import apiClient from "../../services/apiClient";
 import { toast, Slide } from "react-toastify";
 import { AuthContext } from "../../../context/AuthContext";
 import DeleteModal from "./DeleteModal";
@@ -51,14 +51,7 @@ export default function VibeHeader({
     },
   });
   async function deletePost() {
-    return await axios.delete(
-      `${import.meta.env.VITE_BASE_URL}/${endPoint}/${entityId}`,
-      {
-        headers: {
-          token: localStorage.getItem("token"),
-        },
-      },
-    );
+    return await apiClient.delete(`/${endPoint}/${entityId}`);
   }
 
   return (

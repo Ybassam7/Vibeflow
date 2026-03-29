@@ -1,16 +1,9 @@
-import axios from "axios";
+import apiClient from "../services/apiClient";
 import { useQuery } from "@tanstack/react-query";
 
 export default function useVibeFetch(queryKey, endPoint, options = {}) {
   const getData = async () => {
-    const { data } = await axios.get(
-      `${import.meta.env.VITE_BASE_URL}/${endPoint}`,
-      {
-        headers: {
-          token: localStorage.getItem("token"),
-        },
-      }
-    );
+    const { data } = await apiClient.get(`/${endPoint}`)
     return data;
   };
 

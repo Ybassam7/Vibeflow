@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
+import apiClient from "../../services/apiClient";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Label, TextInput, Alert as FlowbiteAlert } from "flowbite-react";
@@ -40,10 +40,7 @@ export default function Login() {
 
   async function logData(data) {
     try {
-      const { data: response } = await axios.post(
-        `${import.meta.env.VITE_BASE_URL}/users/signin`,
-        data,
-      );
+      const { data: response } = await apiClient.post("/users/signin", data)
       if (response.message === "success") {
         setApiError(null);
         localStorage.setItem("token", response.token);

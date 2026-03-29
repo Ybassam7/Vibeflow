@@ -8,7 +8,7 @@ import CommentItem from "./CommentItem";
 import CommentForm from "./CommentForm";
 
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import axios from "axios";
+import apiClient from "../../services/apiClient";
 import { toast, Slide } from "react-toastify";
 import Button from "../../../components/ui/Button";
 
@@ -47,15 +47,7 @@ export default function PostItem({ post, showAllComments = false }) {
   async function updatePost() {
     const formData = new FormData();
     formData.append("body", content);
-    return await axios.put(
-      `${import.meta.env.VITE_BASE_URL}/posts/${_id}`,
-      formData,
-      {
-        headers: {
-          token: localStorage.getItem("token"),
-        },
-      },
-    );
+    return await apiClient.put("/posts/${_id}")
   }
 
   let visibleComments = [];

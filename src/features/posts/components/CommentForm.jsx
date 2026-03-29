@@ -3,7 +3,7 @@ import { IoSend } from "react-icons/io5";
 import { useForm } from "react-hook-form";
 import { FaSpinner } from "react-icons/fa";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import axios from "axios";
+import apiClient from "../../services/apiClient";
 import { toast, Slide } from "react-toastify";
 import Button from "../../../components/ui/Button";
 
@@ -42,15 +42,7 @@ export default function AddComment({ post }) {
       content: data.content,
       post: post?._id,
     };
-    return axios.post(
-      `${import.meta.env.VITE_BASE_URL}/comments`,
-      commentData,
-      {
-        headers: {
-          token: localStorage.getItem("token"),
-        },
-      },
-    );
+    return apiClient.post("/comments")
   }
 
   const handleKeyDown = (e) => {

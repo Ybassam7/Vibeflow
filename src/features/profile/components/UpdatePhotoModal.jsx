@@ -3,7 +3,7 @@ import { Modal, ModalBody, Label, FileInput } from "flowbite-react";
 import { FaCloudUploadAlt, FaTimes } from "react-icons/fa"; // Added FaTimes for clearing
 import { useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
-import axios from "axios";
+import apiClient from "../../services/apiClient";
 import Button from "../../../components/ui/Button";
 import { toast, Slide } from "react-toastify";
 import { AuthContext } from "../../../context/AuthContext";
@@ -63,16 +63,7 @@ export default function UpdatePhotoModal({ show, onClose }) {
       formData.append("photo", data.photo[0]);
     }
 
-    return await axios.put(
-      `${import.meta.env.VITE_BASE_URL}/users/upload-photo`,
-      formData,
-      {
-        headers: {
-          token: localStorage.getItem("token"),
-          "Content-Type": "multipart/form-data",
-        },
-      },
-    );
+    return await apiClient.put("/users/upload-photo")
   }
 
   const { mutate: handleChangeProfilePhoto, isPending } = useMutation({

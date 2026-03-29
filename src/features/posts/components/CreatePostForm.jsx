@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { FaImage, FaTimes } from "react-icons/fa";
 import { useForm } from "react-hook-form";
-import axios from "axios";
+import apiClient from "../../services/apiClient";
 import Button from "../../../components/ui/Button";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -56,15 +56,7 @@ export default function CreatePostForm() {
 
   const { mutate, isPending } = useMutation({
     mutationFn: async (formData) => {
-      const { data } = await axios.post(
-        `${import.meta.env.VITE_BASE_URL}/posts`,
-        formData,
-        {
-          headers: {
-            token: localStorage.getItem("token"),
-          },
-        },
-      );
+      const { data } = awaitapiClient.post("/posts")
       return data;
     },
     onSuccess: () => {

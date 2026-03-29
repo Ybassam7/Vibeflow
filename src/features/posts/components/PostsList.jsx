@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { useInfiniteQuery } from "@tanstack/react-query";
-import axios from "axios";
+import apiClient from "../../services/apiClient";
 import PostItem from "./PostItem";
 import PostSkeleton from "./PostSkeleton";
 import { AuthContext } from "../../../context/AuthContext";
@@ -9,22 +9,16 @@ export default function PostsList({ isHome = true }) {
   const { userData } = useContext(AuthContext);
 
   const fetchPosts = async ({ pageParam = 1 }) => {
-    const limit = 15;
+  const limit = 15;
 
-    const baseUrl = isHome
-      ? `/posts?limit=${limit}&sort=-createdAt&page=${pageParam}`
-      : `/users/${userData?._id}/posts?limit=${limit}`;
+  const baseUrl = isHome
+    ? `/posts?limit=${limit}&sort=-createdAt&page=${pageParam}`
+    : `/users/${userData?._id}/posts?limit=${limit}`;
 
-    const FULL_URL = `${import.meta.env.VITE_BASE_URL}${baseUrl}`;
+  const { data } = await apiClient.get(baseUrl);
 
-    const { data } = await axios.get(FULL_URL, {
-      headers: {
-        token: localStorage.getItem("token"),
-      },
-    });
-
-    return data;
-  };
+  return data;
+};
 
   const {
     data,

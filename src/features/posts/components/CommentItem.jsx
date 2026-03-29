@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import VibeHeader from "./VibeHeader";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import axios from "axios";
+import apiClient from "../../services/apiClient";
 import { toast, Slide } from "react-toastify";
 import Button from "../../../components/ui/Button";
 
@@ -36,15 +36,7 @@ export default function CommentItem({ comment }) {
   });
 
   async function updateComment() {
-    return await axios.put(
-      `${import.meta.env.VITE_BASE_URL}/comments/${comment._id}`,
-      { content: content },
-      {
-        headers: {
-          token: localStorage.getItem("token"),
-        },
-      },
-    );
+    return await apiClient.put("/comments/${comment._id}")
   }
 
   return (

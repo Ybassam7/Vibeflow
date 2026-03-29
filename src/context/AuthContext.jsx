@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { createContext } from "react";
 import { useState } from "react";
-import axios from "axios";
+import apiClient from "../../services/apiClient";
 
 export const AuthContext = createContext(null);
 
@@ -26,14 +26,7 @@ export default function AuthContextProvider({ children }) {
 
   async function getProfileData(token) {
     try {
-      const { data } = await axios.get(
-        `${import.meta.env.VITE_BASE_URL}/users/profile-data`,
-        {
-          headers: {
-            token: token,
-          },
-        }
-      );
+      const { data } = await apiClient.get("/users/profile-data");
       if (data.message === "success") {
         setUserData(data.user);
       } else if (data.error) {
