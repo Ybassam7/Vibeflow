@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { FaImage, FaTimes } from "react-icons/fa";
 import { useForm } from "react-hook-form";
-import apiClient from "../services/apiClient";
+import apiClient from "../../../services/apiClient";
 import Button from "../../../components/ui/Button";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";

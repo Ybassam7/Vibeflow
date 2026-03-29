@@ -3,7 +3,7 @@ import { Avatar, Dropdown, DropdownItem } from "flowbite-react";
 import { formatDate } from "../../../utils/formatDate";
 import { HiDotsHorizontal, HiPencil, HiTrash } from "react-icons/hi";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import apiClient from "../services/apiClient";
+import apiClient from "../../services/apiClient";
 import { toast, Slide } from "react-toastify";
 import { AuthContext } from "../../../context/AuthContext";
 import DeleteModal from "./DeleteModal";

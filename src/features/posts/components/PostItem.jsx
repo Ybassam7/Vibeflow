@@ -8,7 +8,7 @@ import CommentItem from "./CommentItem";
 import CommentForm from "./CommentForm";
 
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import apiClient from "../services/apiClient";
+import apiClient from "../../../services/apiClient";
 import { toast, Slide } from "react-toastify";
 import Button from "../../../components/ui/Button";
 
