@@ -107,7 +107,7 @@ export default function Register() {
         const year = date.getFullYear();
         payload.dateOfBirth = `${month}-${day}-${year}`;
       }
-      const { data: response } = await apiClient.post("/users/signup")
+      const { data: response } = await apiClient.post("/users/signup", formData)
       if (response.message === "success") {
         setApiError(null);
         navigate("/login");
